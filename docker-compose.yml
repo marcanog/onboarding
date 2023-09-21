@@ -6,14 +6,14 @@ services:
     networks:
       - local
     ports:
-      - 80:80
+      - 8080:8000
     stdin_open: true
     tty: true
     volumes:
       - .:/var/www/html
       - vendordata:/var/www/html/vendor:rw,delegated
   db:
-    image: mariadb:10.3
+    image: mariadb:11.1.2
     restart: always
     networks:
       - local
@@ -22,10 +22,10 @@ services:
     volumes:
       - mysqldata:/var/lib/mysql:rw,delegated
     environment:
-      MYSQL_ROOT_PASSWORD:
-      MYSQL_DATABASE:
-      MYSQL_USER:
-      MYSQL_PASSWORD:
+      MYSQL_ROOT_PASSWORD: onboarding23
+      MYSQL_DATABASE: onboarding
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
   redis:
     ports:
       - 6379:6379
