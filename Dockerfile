@@ -6,7 +6,7 @@ ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
     && echo $TZ > /etc/timezone \
     && apt-get update \
-    && apt-get install -y gnupg gosu curl ca-certificates zip unzip git supervisor nano libcap2-bin libpng-dev sqlite3 python3\
+    && apt-get install -y gnupg gosu curl ca-certificates zip unzip git supervisor nano libcap2-bin libpng-dev python3\
     && mkdir -p ~/.gnupg \
     && chmod 600 ~/.gnupg \
     && echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf \
@@ -24,7 +24,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
           php8.2-msgpack php8.2-igbinary php8.2-redis php8.2-swoole \
           php8.2-memcached php8.2-pcov php8.2-xdebug \
     && php -r "readfile('https://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
-    && apt-get install -y mysql-client \
+    && apt-get install -y mariadb-client \
     && apt-get -y autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \

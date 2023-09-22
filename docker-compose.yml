@@ -6,13 +6,13 @@ services:
     networks:
       - local
     ports:
-      - 8080:8000
+      - 8000:8000
     stdin_open: true
     tty: true
     volumes:
       - .:/var/www/html
       - vendordata:/var/www/html/vendor:rw,delegated
-  db:
+  mariadb:
     image: mariadb:11.1.2
     restart: always
     networks:
@@ -20,12 +20,13 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - mysqldata:/var/lib/mysql:rw,delegated
+      - mydb:/var/lib/mysql:rw,delegated
     environment:
-      MYSQL_ROOT_PASSWORD: onboarding23
-      MYSQL_DATABASE: onboarding
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MARIADB_ROOT_PASSWORD: onboarding23
+      MARIADB_DATABASE: onboarding
+      MARIADB_USER: laravel
+      MARIADB_PASSWORD: onboarding23
+      MARIADB_MYSQL_LOCALHOST_PASSWORD: onboarding
   redis:
     ports:
       - 6379:6379
@@ -33,7 +34,7 @@ services:
       - local
     image: redis:4.0.14-alpine
 volumes:
-  mysqldata:
+  mydb:
     driver: local
   vendordata:
     driver: local
