@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    content:  ['./resources/**/*.blade.php', './resources/**/*.js', './node_modules/tw-elements/dist/js/**/*.js'],
+export default {
+    content: [
+        './resources/**/*.blade.php',
+        './resources/**/*.js'
+    ],
     fontFamily: {
-        sans: ['Roboto', 'sans-serif']
+        body_font: ['Inclusive Sans', 'Poppins', 'Open Sans'],
     },
     extend: {
-        spacing:{
+        spacing: {
             '1': '8px',
             '2': '12px',
             '3': '16px',
@@ -15,6 +18,22 @@ module.exports = {
         },
         borderRadius: {
             '4xl': '2rem',
-        }
+        },
+        backgroundImage:{
+            'background_pattern': "url('/img/fondo1.jpg')",
+        },
+        backgroundSize:{
+            'auto': 'auto',
+            'cover': 'cover',
+            'contain': 'contain',
+            '50%' : '50%',
+            'full' : '100%',
+        },
+        plugins: [
+            require('@tailwindcss/typography'),
+            require('@tailwindcss/forms'),
+            require('@tailwindcss/aspect-ratio'),
+            require('@tailwindcss/container-queries'),
+        ]
     }
-}
+};
