@@ -7,7 +7,7 @@ use Livewire\Component;
 class Main extends Component
 {
     public $customer = 'Customer';
-    public $title = ',vamos a crear tu cuenta!';
+    public $title = 'vamos a crear tu cuenta!';
     public $subtext = 'Elige tu perfil para empezar a usar la plataforma...';
 
     public $profile = '';
