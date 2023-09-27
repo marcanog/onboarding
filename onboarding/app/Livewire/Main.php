@@ -29,4 +29,11 @@ class Main extends Component
         return view('livewire.main')
             ->layout('layouts.layout');
     }
+    public function next(){
+        return $this->redirect('/bussines-name');
+    }
+    //Esta parte del codigo es pensando que el usuario viene desde otra parte del formulario
+    /*public function before(){
+        return $this->redirect('/');
+    }*/
 }
