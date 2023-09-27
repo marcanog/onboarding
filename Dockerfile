@@ -21,7 +21,7 @@ ENV LOG_CHANNEL stderr
 
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
-RUN useradd -ms /bin/bash --no-user-group -g 1000 -u 1337 laravel
+#RUN useradd -ms /bin/bash --no-user-group -g 1000 -u 1337 laravel
 COPY docker/start-container /usr/local/bin/start-container
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY docker/php.ini /etc/php/8.2/cli/conf.d/99-laravel.ini
