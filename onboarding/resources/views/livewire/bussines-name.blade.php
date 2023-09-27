@@ -7,15 +7,13 @@
                     class="bg-gradient-to-r from-blue-600 via-green-500 to-pink-500 inline-block text-transparent bg-clip-text">{{ $title }}</span>&nbsp;{{$subtext}}
             </h1>
 
-            <form class="min-w-full text-xl my-6 space-y-4" wire:submit="save">
+            <form class="min-w-full text-xl my-6 space-y-12 pb-2" wire:submit="save">
 
                 <!-- org_name hace referencia al nombre de la empresa-->
-                <label for="org_name" class="md:block">{{ $bussines_name }}</label>
-                <input type="text" id="org_name" class="w-[60%] border-t-0 border-x-0 bg-[transparent] border-b-2 border-gray-400 text-gray-900" wire:model="org_name">
+                <input type="text" id="org_name" placeholder="{{ $bussines_name }}" class="w-[60%] border-t-0 border-x-0 bg-[transparent] border-b border-gray-300 text-gray-900 focus:outline-none" wire:model="org_name">
 
                 <!-- org_name hace referencia al slogan de la empresa-->
-                <label for="org_slogan" class="md:block">{{ $slogan }}</label>
-                <input type="text" id="org_slogan" class="w-[60%] bg-[transparent] border-x-0 border-t-0 border-b-2 border-gray-400 text-gray-900" wire:model="org_slogan">
+                <input type="text" id="org_slogan" placeholder="{{ $slogan }}" class="w-[60%] bg-[transparent] border-x-0 border-t-0 border-b  border-gray-300 text-gray-900 focus:outline-none" wire:model="org_slogan">
 
             </form>
             <div class="my-6 lg:justify-between min-w-full">
