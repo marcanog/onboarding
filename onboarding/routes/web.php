@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', App\Livewire\Main::class);
 Route::get('/bussines-name', \App\Livewire\BussinesName::class);
 Route::get('/services', \App\Livewire\Services::class);
+Route::get('/bussines-area', App\Livewire\BussinesArea::class);

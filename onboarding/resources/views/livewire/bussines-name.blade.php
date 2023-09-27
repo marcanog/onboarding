@@ -17,10 +17,10 @@
 
             </form>
             <div class="my-6 lg:justify-between min-w-full">
-                <button wire:click="next()" class="w-[30%] px-3 py-2 bg-red-600 text-white hover:bg-red-600 hover:text-red-400 rounded">
+                <button wire:click="before" class="w-[30%] px-3 py-2 bg-red-600 text-white hover:bg-red-600 hover:text-red-400 rounded">
                     Anterior
                 </button>
-                <button wire:click="before()" class="w-[30%] px-3 py-2 bg-blue-600 text-white hover:bg-blue-500 hover:text-blue-400 rounded">
+                <button wire:click="next()" class="w-[30%] px-3 py-2 bg-blue-600 text-white hover:bg-blue-500 hover:text-blue-400 rounded">
                     Siguiente
                 </button>
             </div>

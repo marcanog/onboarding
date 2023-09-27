@@ -19,9 +19,9 @@ class BussinesName extends Component
     }
 
     public function next(){
-        return $this->redirect('/');
+        return $this->redirect('/services');
     }
     public function before(){
-        return $this->redirect('/services');
+        return $this->redirect('/');
     }
 }
