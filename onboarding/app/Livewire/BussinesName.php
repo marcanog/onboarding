@@ -22,6 +22,6 @@ class BussinesName extends Component
         return $this->redirect('/');
     }
     public function before(){
-        return $this->redirect('');
+        return $this->redirect('/services');
     }
 }

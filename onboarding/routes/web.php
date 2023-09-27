@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Livewire\Main;
-Use \App\Livewire\BussinesName;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,5 +16,6 @@ Use \App\Livewire\BussinesName;
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-Route::get('/', Main::class);
-Route::get('/bussines-name', BussinesName::class);
+Route::get('/', App\Livewire\Main::class);
+Route::get('/bussines-name', \App\Livewire\BussinesName::class);
+Route::get('/services', \App\Livewire\Services::class);

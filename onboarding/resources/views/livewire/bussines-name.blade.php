@@ -2,7 +2,7 @@
     <div
         class="md:flex flex-wrap items-center min-h-screen py-6 mx-auto justify-center relative overflow-hidden sm:py-12">
         <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-6/10 leading-tight px-6 py-12 md:px-12">
-            <h1 class="mb-4 text-5xl font-semibold">¡
+            <h1 class="mb-4 text-5xl font-semibold">
                 <span
                     class="bg-gradient-to-r from-blue-600 via-green-500 to-pink-500 inline-block text-transparent bg-clip-text">{{ $title }}</span>&nbsp;{{$subtext}}
             </h1>
