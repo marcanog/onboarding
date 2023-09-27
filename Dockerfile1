@@ -34,14 +34,15 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
 COPY docker/start-container /usr/local/bin/start-container
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY docker/php.ini /etc/php/8.2/cli/conf.d/99-laravel.ini
-RUN chmod +x /usr/local/bin/start-container \
-    && chmod +x -R /var/www/html
+
 # Run without cache below
 ARG CACHEBUST=1
 #RUN chmod +x -R vendor
 # RUN composer install
 RUN composer create-project laravel/laravel onboarding \
     && cd onboarding \
-    && composer require livewire/livewire
+    && composer require livewire/livewire \
+    && chmod +x /usr/local/bin/start-container \
+    && chown laravel -R /var/www/html && chmod +x -R /var/www/html
 EXPOSE 8000
 ENTRYPOINT ["start-container"]
