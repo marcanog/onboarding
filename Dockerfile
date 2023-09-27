@@ -31,7 +31,5 @@ RUN chmod +x /usr/local/bin/start-container \
 ARG CACHEBUST=1
 #RUN chmod +x -R vendor
 # RUN composer install
-#RUN composer create-project laravel/laravel onboarding \
-    && cd onboarding \
-    && composer require livewire/livewire
+#RUN composer create-project laravel/laravel onboarding \    && cd onboarding \    && composer require livewire/livewire
 CMD ["/start.sh"]
