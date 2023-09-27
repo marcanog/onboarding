@@ -1,4 +1,9 @@
 FROM richarvey/nginx-php-fpm:1.7.2
+FROM ubuntu:22.04
+MAINTAINER Georgelys Marcano <georgelysmarcanob@gmail.com>
+WORKDIR /var/www/html
+ENV DEBIAN_FRONTEND noninteractive
+ENV TZ=UTC
 
 COPY onboarding .
 
@@ -16,5 +21,17 @@ ENV LOG_CHANNEL stderr
 
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
-
+RUN useradd -ms /bin/bash --no-user-group -g 1000 -u 1337 laravel
+COPY docker/start-container /usr/local/bin/start-container
+COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY docker/php.ini /etc/php/8.2/cli/conf.d/99-laravel.ini
+RUN chmod +x /usr/local/bin/start-container \
+    && chmod +x -R /var/www/html
+# Run without cache below
+ARG CACHEBUST=1
+#RUN chmod +x -R vendor
+# RUN composer install
+RUN composer create-project laravel/laravel onboarding \
+    && cd onboarding \
+    && composer require livewire/livewire
 CMD ["/start.sh"]
