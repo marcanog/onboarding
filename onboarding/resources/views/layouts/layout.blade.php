@@ -19,16 +19,8 @@
 
 <body class="container mx-auto h-full font-['Inclusive_Sans'] bg-white antialiased bg-cover bg-center bg-no-repeat justify-center bg-[url('/img/fondo1.jpg')]">
 
-<div class="md:flex flex-wrap items-center min-h-screen py-6 mx-auto justify-center relative overflow-hidden sm:py-12">
-    <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-6/10 leading-tight px-6 py-12 md:px-12">
-        {{$slot}}
-    </div>
-    <div class="shrink-0 grow-0 basis-auto md:w-96 lg:flex lg:w-6/12 xl:w-6/10">
-        <img src="{{asset('img/Tablet_login.svg')}}" alt="user profile"
-             class="rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
-        />
-    </div>
-</div>
+{{ $slot }}
+
 @livewireScripts
 </body>
 </html>
