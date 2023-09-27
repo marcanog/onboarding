@@ -1,6 +1,6 @@
 FROM richarvey/nginx-php-fpm:1.7.2
 
-COPY . .
+COPY onboarding .
 
 # Image config
 ENV SKIP_COMPOSER 1
