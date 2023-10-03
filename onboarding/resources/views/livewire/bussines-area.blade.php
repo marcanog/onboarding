@@ -15,7 +15,7 @@
                      <div wire:key="{{$areas->id}}" class="grid grid-cols-2 gap-2">
                          <div class="block h-auto max-w-full p-6 bg-white border border-gray-200 rounded-lg focus:border-blue-500 hover:border-blue-500 shadow-[0_0px_3px_0_rgba(0,0,0,0.07),0_2px_2px_0_rgba(0,0,0,0.04)] ">
                              <div class="flex items-center justify-end h-5">
-                                 <input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+                                 <input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value="{{$areas->name}}" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
                              </div>
                              <div class="ml-2 text-sm">
                                  <label for="helper-radio" class="font-medium text-gray-900">{{$areas->title}}</label>
@@ -26,11 +26,11 @@
                  @endforeach--}}
 
                 {{--Codigo ejemplo para visualizar el resultado final--}}
-                <div class="grid grid-cols-2 gap-2">
+                <div class="grid grid-cols-2 gap-2 group">
                     <div
                         class="block h-auto max-w-full p-6 bg-white border border-gray-200 rounded-lg focus:border-blue-500 hover:border-blue-500 shadow-[0_0px_3px_0_rgba(0,0,0,0.07),0_2px_2px_0_rgba(0,0,0,0.04)] ">
                         <div class="flex items-center justify-end h-5">
-                            <input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value=""
+                            <input id="helper-radio" aria-describedby="helper-radio-text" name="list-radio" type="radio" value=""
                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
                         </div>
                         <div class="ml-2 text-sm">
@@ -44,7 +44,7 @@
                     <div
                         class="block h-auto max-w-full p-6 bg-white border border-gray-200 rounded-lg focus:border-blue-500 hover:border-blue-500 shadow-[0_0px_3px_0_rgba(0,0,0,0.07),0_2px_2px_0_rgba(0,0,0,0.04)] ">
                         <div class="flex items-center justify-end h-5">
-                            <input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value=""
+                            <input id="helper-radio" aria-describedby="helper-radio-text" name="list-radio"type="radio" value=""
                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
                         </div>
                         <div class="ml-2 text-sm">
@@ -58,7 +58,7 @@
                     <div
                         class="block h-auto max-w-full p-6 bg-white border border-gray-200 rounded-lg focus:border-blue-500 hover:border-blue-500 shadow-[0_0px_3px_0_rgba(0,0,0,0.07),0_2px_2px_0_rgba(0,0,0,0.04)] ">
                         <div class="flex items-center justify-end h-5">
-                            <input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value=""
+                            <input id="helper-radio" aria-describedby="helper-radio-text" name="list-radio" type="radio" value=""
                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
                         </div>
                         <div class="ml-2 text-sm">
@@ -72,7 +72,7 @@
                     <div
                         class="block h-auto max-w-full p-6 bg-white border border-gray-200 rounded-lg focus:border-blue-500 hover:border-blue-500 shadow-[0_0px_3px_0_rgba(0,0,0,0.07),0_2px_2px_0_rgba(0,0,0,0.04)] ">
                         <div class="flex items-center justify-end h-5">
-                            <input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value=""
+                            <input id="helper-radio" aria-describedby="helper-radio-text" name="list-radio" type="radio" value=""
                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
                         </div>
                         <div class="ml-2 text-sm">

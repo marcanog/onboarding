@@ -16,7 +16,7 @@ class BussinesArea extends Component
     }
 
     public function next(){
-        return $this->redirect('');
+        return $this->redirect('/');
     }
     public function before(){
         return $this->redirect('/services');

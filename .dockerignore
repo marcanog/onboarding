@@ -1,12 +1,4 @@
-Dockerfile1
-.ignore
-/node_modules
-**/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-.env
-.phpunit.result.cache
-npm-debug.log
-yarn-error.log
+Dockerfile
+**/.git
+.gitignore
+.dockerignore
