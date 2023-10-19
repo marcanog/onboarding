@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 Route::get('/', App\Livewire\Main::class);
-Route::get('/bussines-name', \App\Livewire\BussinesName::class);
-Route::get('/services', \App\Livewire\Services::class);
-Route::get('/bussines-area', App\Livewire\BussinesArea::class);
+Route::get('/business-name', App\Livewire\BusinessName::class);
+Route::get('/services', App\Livewire\Services::class);
+Route::get('/business-area', App\Livewire\BusinessArea::class);
 Route::get('/how-contactus', App\Livewire\HowContacts::class);

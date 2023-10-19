@@ -2,10 +2,11 @@
 export default {
     content: [
         './resources/**/*.blade.php',
-        './resources/**/*.js'
+        './resources/**/*.js',
+        './node_modules/flowbite/**/*.js'
     ],
     fontFamily: {
-        body_font: ['Inclusive Sans', 'Poppins', 'Open Sans'],
+        body_font: ['DM Sans', 'Poppins', 'Open Sans'],
     },
     extend: {
         spacing: {
@@ -19,15 +20,10 @@ export default {
         borderRadius: {
             '4xl': '2rem',
         },
-        backgroundImage:{
-            'background_pattern': "url('/img/fondo1.jpg')",
-        },
-        backgroundSize:{
-            'auto': 'auto',
-            'cover': 'cover',
-            'contain': 'contain',
-            '50%' : '50%',
-            'full' : '100%',
+        screens:{
+            'sm': '360px',
+            'md': '744px',
+            'lg': '1366px',
         },
         plugins: [
             require('flowbite/plugin')

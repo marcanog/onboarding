@@ -7,10 +7,16 @@ use Livewire\Component;
 class Services extends Component
 {
 
-    public $title = '3 servicios';
-    public $subtext = "que ofrezca tu empresa";
+    public $title = 'Indica 3 servicios que ofrece tu empresa';
+    public $fservice = 'Primer Servicio*';
+    public $sservice = 'Segundo Servicio*';
+    public $tservice = 'Tercer Servicio*';
+    public $phrase = 'Escribe un servicio de tu empresa';
 
-
+    public function save()
+    {
+        return $this->redirect('livewire.business-area');
+    }
 
     public function render()
     {
@@ -18,11 +24,14 @@ class Services extends Component
             ->layout('layouts.layout');
     }
 
-    public function next(){
-        return $this->redirect('/bussines-area');
+    public function next()
+    {
+        return $this->redirect('/business-area');
     }
-    public function before(){
-        return $this->redirect('/bussines-name');
+
+    public function before()
+    {
+        return $this->redirect('/business-name');
     }
 
 }

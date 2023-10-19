@@ -9,7 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&display=swap" rel="stylesheet">
 
     <!-- scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
@@ -20,9 +20,18 @@
 
 </head>
 
-<body class="container mx-auto h-full font-['Inclusive_Sans'] bg-white antialiased bg-cover bg-center bg-no-repeat justify-center bg-[url('/img/fondo1.jpg')]">
+<body class="mx-auto h-full font-['DM_Sans'] bg-white justify-center">
+<header>
+    @include('layouts.header')
+</header>
 
-{{ $slot }}
+<div id="main" class="row md:min-h-[700px]">
+    {{ $slot }}
+</div>
+
+<footer>
+    @include('layouts.pagination')
+</footer>
 
 @livewireScripts
 </body>

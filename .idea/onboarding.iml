@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/onboarding/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/onboarding/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/onboarding/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/onboarding/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/onboarding/tests" isTestSource="true" packagePrefix="Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/onboarding/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/onboarding/vendor/composer" />
@@ -121,6 +122,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="flowbite" level="application" />
     <orderEntry type="library" name="flowbite" level="application" />
   </component>
 </module>

@@ -1,13 +1,14 @@
-<div>
+<div class="flex justify-evenly">
     <div
-        class="md:flex flex-wrap items-center min-h-screen py-6 mx-auto justify-center relative overflow-hidden sm:py-12">
-        <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-6/10 leading-tight px-6 py-12 md:px-12">
-            <h1 class="mb-4 text-4xl font-semibold">Escribe
-                <span
-                    class="bg-gradient-to-r from-blue-600 via-green-500 to-pink-500 inline-block text-transparent bg-clip-text">{{ $title }}</span>&nbsp;{{$subtext}}
+        class="flex gap-2 overflow-hidden justify-center py-32 md:px-16">
+        <div class="shrink-0 grow-0 basis-auto lg:w-9/12 xl:w-9/10 leading-loose py-12 md:px-16">
+            {{--Inicio Título--}}
+            <h1 class="mb-4 text-2xl font-semibold">
+                {{ $title }}&nbsp;
             </h1>
-
-            <form class="min-w-full text-xl my-6 space-y-12 pb-2" wire:submit.prevent="save">
+            {{--Fin Título--}}
+            {{--Inicio Formulario--}}
+            <form class="min-w-full text-xl my-6 space-y-6 pb-2 mb-8" wire:submit.prevent="save">
                 {{-- loops para almacenar los servicios indicados por el usuario --}}
                 {{--@foreach($services as $service)
                     <div wire:key="services{{ $services->id }}">
@@ -15,27 +16,56 @@
                     </div>
                 @endforeach--}}
                 {{-- Acá debe colocarse el foreach con los servicios ha solicitar llenar por el usuario --}}
-
-                <input type="text" id="service" placeholder="Servicio 1" class="w-[60%] border-t-0 border-x-0 bg-[transparent] border-b border-gray-300 text-gray-900 focus:outline-none" wire:model="services.services1">
-
-                <input type="text" id="service" placeholder="Servicio 2" class="w-[60%] bg-[transparent] border-x-0 border-t-0 border-b  border-gray-300 text-gray-900 focus:outline-none" wire:model="services.services2">
-
-                <input type="text" id="service" placeholder="Servicio 3" class="w-[60%] bg-[transparent] border-x-0 border-t-0 border-b  border-gray-300 text-gray-900 focus:outline-none" wire:model="services.services3">
-
+                <div class="mb-6">
+                    <label for="service1"
+                           class="block text-sm font-bold text-gray-900 leading-loose @required('$fservice')">{{ $fservice }}</label>
+                    <input type="text" id="service1" placeholder="{{$phrase}}"
+                           class="w-full bg-[transparent] text-md rounded border border-gray-700 text-gray-900 focus:outline-none focus:border-blue-500 invalid:border-red-500 required:border-red-500 p-2"
+                           wire:model="services.services1">
+                </div>
+                <div class="mb-6">
+                    <label for="service2"
+                           class="block text-sm font-bold text-gray-900 leading-loose @required('$sservice')">{{ $sservice }}</label>
+                    <input type="text" id="service2" placeholder="{{$phrase}}"
+                           class="w-full bg-[transparent] text-md rounded border border-gray-700 text-gray-900 focus:outline-none focus:border-blue-500 invalid:border-red-500 required:border-red-500 p-2"
+                           wire:model="services.services2">
+                </div>
+                <div class="mb-6">
+                    <label for="service3"
+                           class="block text-sm font-bold text-gray-900 leading-loose @required('$tservice')">{{ $tservice }}</label>
+                    <input type="text" id="service3" placeholder="{{$phrase}}"
+                           class="w-full bg-[transparent] text-md rounded border border-gray-700 text-gray-900 focus:outline-none focus:border-blue-500 invalid:border-red-500 required:border-red-500 p-2"
+                           wire:model="services.services3">
+                </div>
 
             </form>
-            <div class="my-6 lg:justify-between min-w-full">
-                <button wire:click="before" class="w-[30%] px-3 py-2 bg-red-600 text-white hover:bg-red-600 hover:text-red-400 rounded">
+            {{--Fin Formulario--}}
+            {{--Inicio botones--}}
+            <div class="flex space-x-4 mt-4 justify-between gap-2">
+                <a wire:click="before()" type="button"
+                   class="inline-flex justify-center items-center align-middle px-3 py-2 md:w-full select-none cursor-pointer text-md border border-gray-900 focus:outline-none focus:border-blue-500 hover:border-blue-500 text-center align-middle rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                         stroke="currentColor" class="w-10 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"/>
+                    </svg>
                     Anterior
-                </button>
-                <button wire:click="next()" class="w-[30%] px-3 py-2 bg-blue-600 text-white hover:bg-blue-500 hover:text-blue-400 rounded">
+                </a>
+                {{--función que active las clases focus, hover y shadow del botón --}}
+                <a wire:click="next()" type="button"
+                   class="inline-flex justify-center items-center align-middle px-3 py-2 md:w-full select-none {{--bg-black border border-gray-900 focus:outline-none focus:border-blue-500 focus:bg-[#00AAE3] focus:shadow-[0_0_0_1px] hover:border-gray-500 shadow-[0_4px_9px_-4px_#cbcbcb] transition-all duration-150 ease hover:shadow-[-3px_-5px_5px_-1px_rgba(0,0,0,.2),_3px_5px_5px_0px_rgba(0,0,0,.2)] hover:outline-none--}} text-white bg-gray-300 cursor-pointer text-center text-white text-sm font-bold align-middle rounded appearance-none disabled">
                     Siguiente
-                </button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                         stroke="currentColor" class="w-10 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/>
+                    </svg>
+                </a>
             </div>
-
+            {{--Fin botones--}}
         </div>
-        <div class="shrink-0 grow-0 basis-auto md:w-96 lg:flex lg:w-6/12 xl:w-6/10">
-            <img src="{{asset('img/Tablet_login.svg')}}" alt="user profile"
+        <div class="shrink-0 grow-0 basis-auto lg:w-5/12 xl:w-6/10 px-6 py-8 md:px-12">
+            <img src="{{asset('img/onboarding-29.svg')}}" alt="user profile"
                  class="rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
             />
         </div>
