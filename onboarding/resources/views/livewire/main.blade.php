@@ -1,13 +1,18 @@
-<div>
+<div class="justify-evenly">
     <div
-        class="text-center shrink-0 grow-0 basis-0 h-leading-loose py-32 md:px-16">
-        <h1 class="text-4xl font-[900] leading-9 gap-10 py-6">
+        class="flex-col justify-center text-center shrink-0 grow-0 basis-0 leading-tight py-12 md:px-16">
+        {{--Inicio Título--}}
+        <h1 class="mb-4 text-2xl font-semibold">
             {{ $title }}
         </h1>
+        {{--Fin Título--}}
+        {{--inicio subtitulo--}}
         <p class="font-[400] md:text-2xl sm:text-md leading-4 p-6">{{ $subtext }}</p>
-        <form class="md:text-xl sm:text-base my-6 leading-loose" wire:submit="save">
+        {{--fin subtitulo--}}
+        {{--Inicio Formulario--}}
+        <form class="w-full text-xl my-6 space-y-8 pb-2" wire:submit.prevent="save">
             <div class="grid justify-center">
-                <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-10">
+                <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-4 md:gap-10">
                     <!-- Este codigo debe ser usado con los datos que se han de obtener de la DB para crear la lista de opciones-->
                     {{--@foreach ($profiles as $profile)
 
@@ -73,5 +78,6 @@
                 </div>
             </div>
         </form>
+        {{--Fin Formulario--}}
     </div>
 </div>

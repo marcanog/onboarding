@@ -12,6 +12,8 @@ class Services extends Component
     public $sservice = 'Segundo Servicio*';
     public $tservice = 'Tercer Servicio*';
     public $phrase = 'Escribe un servicio de tu empresa';
+    public $before = 'Volver';
+    public $next = 'Siguiente';
 
     public function save()
     {

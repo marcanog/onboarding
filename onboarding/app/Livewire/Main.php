@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Livewire;
-use Livewire\WithPagination;
 use Livewire\Component;
 
 class Main extends Component
@@ -11,7 +10,6 @@ class Main extends Component
 
     public $profile = '';
 
-    use WithPagination;
     public function save()
     {
         //Se redirige al siguiente paso

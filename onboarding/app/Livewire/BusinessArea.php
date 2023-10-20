@@ -7,6 +7,8 @@ use Livewire\Component;
 class BusinessArea extends Component
 {
     public $title = '¿A qué sector pertenece tu empresa?';
+    public $before = 'Volver';
+    public $next = 'Siguiente';
 
     public function save()
     {
@@ -17,10 +19,10 @@ class BusinessArea extends Component
         return view('livewire.business-area')->layout('layouts.layout');
     }
 
-    /*public function next(){
-        return $this->redirect('/');
+    public function next(){
+        return $this->redirect('/how-contactus');
     }
     public function before(){
         return $this->redirect('/services');
-    }*/
+    }
 }

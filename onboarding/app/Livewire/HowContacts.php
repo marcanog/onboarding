@@ -6,8 +6,9 @@ use Livewire\Component;
 
 class HowContacts extends Component
 {
-    public $title = 'Para terminar';
-    public $subtext = ', ¿podría decirnos cómo nos ha conocido?';
+    public $title = 'Para terminar, ¿cómo nos conociste?';
+    public $before = 'Volver';
+    public $next = 'Siguiente';
 
     public function save()
     {
@@ -17,7 +18,7 @@ class HowContacts extends Component
         );*/
 
 //        Se redirige al siguiente paso
-        return $this->redirect(BussinesName::class);
+        return $this->redirect('livewire.how-contacts');
     }
 
     public function render()
@@ -30,6 +31,6 @@ class HowContacts extends Component
         return $this->redirect('/');
     }
     public function before(){
-        return $this->redirect('/bussines-area');
+        return $this->redirect('/business-area');
     }
 }
