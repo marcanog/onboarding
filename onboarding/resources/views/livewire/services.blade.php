@@ -44,7 +44,7 @@
             </form>
             {{--Fin Formulario--}}
             {{--Inicio botones--}}
-            <div class="flex grid md:grid-cols-2 sm:grid-cols-1 mt-4 md:justify-between gap-2 px-4">
+            <div class="flex grid md:grid-cols-2 sm:grid-cols-1 mt-4 md:justify-between gap-4 md:gap-8 px-4">
                 <a wire:click="before()" type="button"
                    class="inline-flex justify-center items-center align-middle px-3 py-2 md:w-full select-none cursor-pointer text-md border border-gray-900 focus:outline-none focus:border-blue-500 hover:border-blue-500 text-center align-middle rounded">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"

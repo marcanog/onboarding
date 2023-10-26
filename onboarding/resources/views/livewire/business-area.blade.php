@@ -26,7 +26,7 @@
                  @endforeach--}}
 
                 {{--Codigo ejemplo para visualizar el resultado final--}}
-                <div class="grid md:grid-cols-3 sm:grid-cols-2 md:gap-8 gap-2 group">
+                <div class="grid md:grid-cols-3 grid-cols-2 md:gap-8 gap-2 group">
                     <div
                         class="max-w-sm bg-white p-6 bg-white border border-gray-200 rounded-lg focus:border-gray-500 hover:border-gray-500">
                         <div class="flex flex-col items-center">
@@ -99,7 +99,7 @@
                                 salón de belleza, peluquería, óptica, etc.</p>
                         </div>
                     </div>
-                    <div class="w-full md:col-span-3 sm:col-span-2">
+                    <div class="w-full md:col-span-3 col-span-2">
                         <div class="relative h-10 w-full">
                             <input
                                 class="peer h-full w-full rounded-[7px] border border-gray-200 border-t-transparent bg-transparent px-3 py-2.5 text-sm font-bold text-gray-900 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-200 placeholder-shown:border-t-gray-200 focus:border-1 focus:border-gray-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-gray-50"
@@ -115,7 +115,7 @@
             </form>
             {{--Fin Formulario--}}
             {{--Inicio botones--}}
-            <div class="flex grid md:grid-cols-2 sm:grid-cols-1 mt-4 md:gap-8 px-4">
+            <div class="flex grid md:grid-cols-2 sm:grid-cols-1 mt-4 gap-4 md:gap-8 px-4">
                 <a wire:click="before()" type="button"
                    class="inline-flex justify-center items-center align-middle px-3 py-2 select-none cursor-pointer text-md border border-gray-900 focus:outline-none focus:border-blue-500 hover:border-blue-500 text-center align-middle rounded">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"

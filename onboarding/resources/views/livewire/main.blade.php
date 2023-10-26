@@ -12,7 +12,7 @@
         {{--Inicio Formulario--}}
         <form class="w-full text-xl my-6 space-y-8 pb-2" wire:submit.prevent="save">
             <div class="grid justify-center">
-                <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-4 md:gap-10">
+                <div class="grid md:grid-cols-4 grid-cols-2 gap-4 md:gap-10 mx-4">
                     <!-- Este codigo debe ser usado con los datos que se han de obtener de la DB para crear la lista de opciones-->
                     {{--@foreach ($profiles as $profile)
 

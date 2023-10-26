@@ -1,7 +1,7 @@
 <div class="flex justify-center">
     <div
-        class="grid md:grid-cols-2 sm:grid-cols-1 gap-2 w-full overflow-hidden py-12 md:px-16">
-        <div class="flex-wrap w-full shrink-0 grow-0 basis-auto leading-loose py-12 sm:px-16">
+        class="grid md:grid-cols-2 grid-cols-1 gap-2 w-full overflow-hidden py-12 md:px-8">
+        <div class="flex-wrap w-full shrink-0 grow-0 basis-auto leading-loose py-12 sm:px-8">
             {{--inicio titulo--}}
             <h1 class="mb-4 text-2xl font-semibold px-6">
                 {{ $title }}
@@ -33,7 +33,7 @@
             </form>
             {{--fin formulario--}}
             {{--inicio botones--}}
-            <div class="flex grid md:grid-cols-2 sm:grid-cols-1 mt-4 md:justify-between gap-2 px-4">
+            <div class="flex grid md:grid-cols-2 sm:grid-cols-1 mt-4 md:justify-between gap-4 md:gap-8 px-4">
                 <a wire:click="before()" type="button"
                    class="inline-flex justify-center items-center align-middle px-3 py-2 md:w-full select-none cursor-pointer text-md border border-gray-900 focus:outline-none focus:border-blue-500 hover:border-blue-500 text-center align-middle rounded">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
